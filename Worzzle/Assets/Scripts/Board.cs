@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro.EditorUtilities;
 using TMPro;
 using UnityEngine;
@@ -35,9 +33,12 @@ public class Board : MonoBehaviour
     public Button newWordButton;
     public Button tryAgainButton;
 
+    AudioManager audioManager;
+
     private void Awake()
     {
         rows = GetComponentsInChildren<Row>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void Start()
@@ -74,6 +75,7 @@ public class Board : MonoBehaviour
     {
         word = solutions[Random.Range(0, solutions.Length)];
         word = word.ToLower().Trim();
+        Debug.Log("Correct Word: " + word);
     }
 
     private void Update()
@@ -82,6 +84,7 @@ public class Board : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
+            audioManager.PlaySFX(audioManager.backspace);
             columnIndex = Mathf.Max(columnIndex - 1, 0);
             currentRow.tiles[columnIndex].SetLetter('\0');
             currentRow.tiles[columnIndex].SetState(emptyState);
@@ -91,6 +94,7 @@ public class Board : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                audioManager.PlaySFX(audioManager.enter);
                 SubmitRow(currentRow);
             }
         }
@@ -100,6 +104,7 @@ public class Board : MonoBehaviour
             {
                 if (Input.GetKeyDown(SUPPORTED_KEYS[i]))
                 {
+                    audioManager.PlaySFX(audioManager.softType);
                     currentRow.tiles[columnIndex].SetLetter((char)SUPPORTED_KEYS[i]);
                     currentRow.tiles[columnIndex].SetState(occupiedState);
                     columnIndex++;
@@ -203,7 +208,7 @@ public class Board : MonoBehaviour
 
     private bool HasWon (Row row)
     {
-        for (int i = 0; i <= rows.Length; i++)
+        for (int i = 0; i < row.tiles.Length; i++)
         {
             if (row.tiles[i].state != correctState)
             {
