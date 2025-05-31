@@ -11,6 +11,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip softType;
     public AudioClip backspace;
     public AudioClip enter;
+    public AudioClip invalidWord;
+    public AudioClip loseState;
+    public AudioClip winState;
 
     [Header("BGMusic Clip")]
     public AudioClip defaultPlaylist;

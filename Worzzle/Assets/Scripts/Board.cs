@@ -21,6 +21,10 @@ public class Board : MonoBehaviour
     private int rowIndex;
     private int columnIndex;
 
+    public ParticleSystem confetti;
+    public ParticleSystem confettiBurst;
+
+
     [Header("States")]
     public Tile.State emptyState;
     public Tile.State occupiedState;
@@ -119,6 +123,7 @@ public class Board : MonoBehaviour
         if (!IsValidWord(row.word))
         {
             invalidWordText.gameObject.SetActive(true);
+            audioManager.PlaySFX(audioManager.invalidWord);
             return;
         }
 
@@ -166,7 +171,15 @@ public class Board : MonoBehaviour
 
         if (HasWon(row))
         {
+            if (confetti != null)
+            {
+                confetti.transform.position = new Vector3(0, 3, 6); // Adjust as needed
+                confettiBurst.Play();
+            }
+
+            audioManager.PlaySFX(audioManager.winState);
             enabled = false;
+            return;
         }
 
         rowIndex++;
@@ -174,6 +187,7 @@ public class Board : MonoBehaviour
 
         if (rowIndex >= rows.Length)
         {
+            audioManager.PlaySFX(audioManager.loseState);
             enabled = false;
         }    
     }
