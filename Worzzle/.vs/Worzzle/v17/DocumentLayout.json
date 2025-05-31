@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\codings\\LSPU CODES\\Worzzle\\Worzzle\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F2D8B496-EB2C-7FBE-0D18-08FDB0114B71}|Assembly-CSharp.csproj|E:\\codings\\LSPU CODES\\Worzzle\\Worzzle\\assets\\scripts\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F2D8B496-EB2C-7FBE-0D18-08FDB0114B71}|Assembly-CSharp.csproj|e:\\codings\\lspu codes\\worzzle\\worzzle\\assets\\scripts\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2D8B496-EB2C-7FBE-0D18-08FDB0114B71}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2D8B496-EB2C-7FBE-0D18-08FDB0114B71}|Assembly-CSharp.csproj|e:\\codings\\lspu codes\\worzzle\\worzzle\\assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D8B496-EB2C-7FBE-0D18-08FDB0114B71}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2D8B496-EB2C-7FBE-0D18-08FDB0114B71}|Assembly-CSharp.csproj|e:\\codings\\lspu codes\\worzzle\\worzzle\\assets\\scripts\\uishaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D8B496-EB2C-7FBE-0D18-08FDB0114B71}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uishaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,22 +28,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Board.cs",
               "ToolTip": "E:\\codings\\LSPU CODES\\Worzzle\\Worzzle\\Assets\\Scripts\\Board.cs",
               "RelativeToolTip": "Assets\\Scripts\\Board.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAtwLUAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAuwH4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T15:14:59.913Z",
+              "WhenOpened": "2025-05-31T14:38:31.158Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AudioManager.cs",
-              "DocumentMoniker": "E:\\codings\\LSPU CODES\\Worzzle\\Worzzle\\Assets\\Scripts\\AudioManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AudioManager.cs",
-              "ToolTip": "E:\\codings\\LSPU CODES\\Worzzle\\Worzzle\\Assets\\Scripts\\AudioManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AudioManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Title": "UIShaker.cs",
+              "DocumentMoniker": "E:\\codings\\LSPU CODES\\Worzzle\\Worzzle\\Assets\\Scripts\\UIShaker.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UIShaker.cs",
+              "ToolTip": "E:\\codings\\LSPU CODES\\Worzzle\\Worzzle\\Assets\\Scripts\\UIShaker.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UIShaker.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T14:59:14.619Z",
+              "WhenOpened": "2025-05-31T14:37:24.224Z",
               "EditorCaption": ""
             }
           ]

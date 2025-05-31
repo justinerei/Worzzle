@@ -124,6 +124,7 @@ public class Board : MonoBehaviour
         {
             invalidWordText.gameObject.SetActive(true);
             audioManager.PlaySFX(audioManager.invalidWord);
+            GetComponent<UIShaker>()?.Shake();
             return;
         }
 
@@ -188,6 +189,7 @@ public class Board : MonoBehaviour
         if (rowIndex >= rows.Length)
         {
             audioManager.PlaySFX(audioManager.loseState);
+            FindObjectOfType<ScreenFader>().FadeToRed();
             enabled = false;
         }    
     }
