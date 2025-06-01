@@ -36,8 +36,12 @@ public class Board : MonoBehaviour
     public TextMeshProUGUI invalidWordText;
     public Button newWordButton;
     public Button tryAgainButton;
+    public Button helpButton;
+    public Button musicButton;
+    public Button filButton;
 
     AudioManager audioManager;
+
 
     private void Awake()
     {
@@ -55,6 +59,7 @@ public class Board : MonoBehaviour
     {
         ClearBoard();
         SetRandomWord();
+        
 
         enabled = true;
     }
@@ -62,6 +67,7 @@ public class Board : MonoBehaviour
     public void TryAgain()
     {
         ClearBoard();
+        
 
         enabled = true;
     }

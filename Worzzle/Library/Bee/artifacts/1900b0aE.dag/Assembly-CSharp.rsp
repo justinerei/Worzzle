@@ -374,9 +374,12 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.62f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/AudioManager.cs"
 "Assets/Scripts/Board.cs"
+"Assets/Scripts/MusicButton.cs"
+"Assets/Scripts/MusicVolumeSlider.cs"
 "Assets/Scripts/Row.cs"
 "Assets/Scripts/ScreenFader.cs"
 "Assets/Scripts/Tile.cs"
+"Assets/Scripts/UIManager.cs"
 "Assets/Scripts/UIShaker.cs"
 -langversion:9.0
 /deterministic
