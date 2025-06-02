@@ -1,5 +1,6 @@
-using TMPro.EditorUtilities;
+using System.Linq;
 using TMPro;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,9 +15,24 @@ public class Board : MonoBehaviour
 
     private Row[] rows;
 
+
+    [SerializeField] private TextAsset englishSolutionsFile;
+    [SerializeField] private TextAsset englishValidFile;
+    [SerializeField] private TextAsset filipinoSolutionsFile;
+    [SerializeField] private TextAsset filipinoValidFile;
+    private string[] englishSolutions;
+    private string[] englishValid;
+    private string[] filipinoSolutions;
+    private string[] filipinoValid;
     private string[] solutions;
     private string[] validWords;
     private string word;
+
+    public Button languageToggleButton;
+    public Sprite filipinoSprite;
+    public Sprite englishSprite;
+    private bool isFilipino = false;
+
 
     private int rowIndex;
     private int columnIndex;
@@ -59,7 +75,6 @@ public class Board : MonoBehaviour
     {
         ClearBoard();
         SetRandomWord();
-        
 
         enabled = true;
     }
@@ -67,18 +82,34 @@ public class Board : MonoBehaviour
     public void TryAgain()
     {
         ClearBoard();
-        
 
         enabled = true;
     }
 
     private void LoadData()
     {
-        TextAsset textFile = Resources.Load("official_wordle_all") as TextAsset;
-        validWords  = textFile.text.Split('\n');
+        englishValid = englishValidFile.text
+            .Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries)
+            .Select(w => w.Trim().ToLower())
+            .ToArray();
 
-        textFile = Resources.Load("official_wordle_common") as TextAsset;
-        solutions = textFile.text.Split('\n');
+        englishSolutions = englishSolutionsFile.text
+            .Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries)
+            .Select(w => w.Trim().ToLower())
+            .ToArray();
+
+        filipinoValid = filipinoValidFile.text
+            .Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries)
+            .Select(w => w.Trim().ToLower())
+            .ToArray();
+
+        filipinoSolutions = filipinoSolutionsFile.text
+            .Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries)
+            .Select(w => w.Trim().ToLower())
+            .ToArray();
+
+        validWords = englishValid;
+        solutions = englishSolutions;
     }
 
     private void SetRandomWord()
@@ -252,4 +283,25 @@ public class Board : MonoBehaviour
         tryAgainButton.gameObject.SetActive(true);
         newWordButton.gameObject.SetActive(true);
     }
+
+    public void ToggleLanguage()
+    {
+        isFilipino = !isFilipino;
+
+        if (isFilipino)
+        {
+            validWords = filipinoValid;
+            solutions = filipinoSolutions;
+            languageToggleButton.image.sprite = englishSprite; // shows ENG
+        }
+        else
+        {
+            validWords = englishValid;
+            solutions = englishSolutions;
+            languageToggleButton.image.sprite = filipinoSprite; // shows FIL
+        }
+
+        NewGame(); // restart game with new language
+    }
+
 }
