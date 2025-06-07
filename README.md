@@ -4,7 +4,7 @@
  
 ![Image](https://github.com/user-attachments/assets/a1924524-b25d-4693-89ef-72b6e5789d61)
 
----
+
 
  ## KEY FEATURES
 #### 🎮 1. Daily Word Puzzle Gameplay
@@ -39,7 +39,7 @@
  - Panels and overlays are toggled using buttons with smooth transitions.
  - Uses proper layering (canvas order, sorting) to prioritize UI interactions.
 
----
+
 
 ## CONFIGURATION
 **Software Requirements**
@@ -47,7 +47,7 @@
  - Scripting Language: C#
  - .NET Version: Unity default
  
----
+
 
 ## ACKNOWLEDGEMENT
 Make sure to subscribe to **Zigurous**, whose YouTube tutorial inspired me — and to **JustineRei** (that’s me!), who improved the game.
