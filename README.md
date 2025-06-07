@@ -50,6 +50,7 @@
 
 
 ## ✔️ Acknowledgement ✔️
-Make sure to subscribe to **Zigurous**, whose YouTube tutorial inspired me — and to **JustineRei** (that’s me!), who improved the game.
+Make sure to subscribe to **Zigurous**, whose YouTube tutorial inspired this project — and credit **JustineRei** (that’s me!) for the improvements made to the game.
+
 
 
