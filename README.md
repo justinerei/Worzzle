@@ -1,4 +1,4 @@
-# WORZZLE GAME
+# 🕹️ Worzzle Game 🕹️
 
  A interactive, bilingual **(ENG <-> FIL)** word puzzle game that challenges players to guess a hidden five-letter word through logical deduction, enriched with audio-visual feedback and customizable music settings. 
  
@@ -6,7 +6,7 @@
 
 
 
- ## KEY FEATURES
+ ## 🔑 Key Features 🔑
 #### 🎮 1. Daily Word Puzzle Gameplay
  - Players **guess** a hidden 5-letter word within a limited number of tries.
  - Feedback is given after each guess to indicate correct, misplaced, or incorrect letters.
@@ -41,7 +41,7 @@
 
 
 
-## CONFIGURATION
+## ⚙️ Configuration ⚙️
 **Software Requirements**
  - Engine: Unity 2022.3.62f1
  - Scripting Language: C#
@@ -49,7 +49,7 @@
  
 
 
-## ACKNOWLEDGEMENT
+## ✔️ Acknowledgement ✔️
 Make sure to subscribe to **Zigurous**, whose YouTube tutorial inspired me — and to **JustineRei** (that’s me!), who improved the game.
 
 
